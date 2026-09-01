@@ -75,7 +75,8 @@
   .talk .wrapper { flex-direction: column; gap: 34px; }
   .turnup__media, .turnup__body,
   .talk__intro, .talk__form { max-width: 100%; flex: 1 1 100%; }
-  .turnup__media img { max-width: 300px; }
+  /* Clamp the knob but keep it square - width alone would stretch it */
+  .turnup__media img { width: 300px; max-width: 100%; height: auto; }
 
   /* Decorative art is desktop-only */
   .sectionimage { display: none; }

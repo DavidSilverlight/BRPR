@@ -116,8 +116,9 @@
   flex: 0 0 504px; max-width: 504px; text-align: center;
   display: flex; align-items: center; justify-content: center;
 }
-/* Knob renders at its native 600x600, overflowing the 504 column (measured) */
-.turnup__media img { margin: 0 auto; width: 600px; max-width: none; height: 600px; }
+/* Knob renders at its native 600x600, overflowing the 504 column (measured).
+   height:auto keeps it square whenever width is clamped at a breakpoint. */
+.turnup__media img { margin: 0 auto; width: 600px; max-width: none; height: auto; }
 .turnup__body { flex: 1 1 616px; max-width: 616px; }
 /* Display heading measured at 124px/124px Bebas Neue — two lines = 248 */
 .turnup__body h2 {
