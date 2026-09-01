@@ -1,0 +1,160 @@
+/* BoardroomPR — responsive ladder
+   Breakpoints taken from the theme stylesheet. Primary breaks: 980 and 740. */
+
+/* ---- 1530: ease header gutters ---- */
+
+@media (max-width: 1530px) {
+  :root { --header-pad-x: 44px; }
+}
+
+@media (max-width: 1280px) {
+  :root { --fs-h1: 42px; --header-pad-x: 30px; }
+  .nav--main > ul { gap: 18px; }
+  .nav--main a { font-size: var(--fs-xs); }
+  .logo svg { width: 220px; }
+  .featured--video { height: 680px; }
+}
+
+@media (max-width: 1100px) {
+  .servicelist__content,
+  .industrylist__content { flex: 0 0 33.333%; }
+  .clientlist li { padding: 8px 16px; }
+  .clientlist img { height: 88px; }
+  /* Decorative art would collide with the grid below this width */
+  .sectionimage { opacity: .25; }
+  .pagetitle h1 { font-size: 60px; line-height: 72px; }
+  .turnup__body h2 { font-size: 96px; line-height: 96px; }
+ .newscard { flex: 0 0 calc(50% - 15px); } 
+}
+
+@media (max-width: 980px) {
+  :root { --fs-h1: 36px; --fs-h2: 28px; --fs-display: 34px; --sec-pad: 40px; }
+
+  .navtoggle { display: block; z-index: 320; }
+
+  .nav--main {
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: 240px; padding: 60px 30px 30px;
+    background: var(--white);
+    box-shadow: -4px 0 20px rgba(0,0,0,.18);
+    transform: translateX(100%);
+    transition: transform .3s var(--ease);
+    overflow-y: auto; z-index: 300;
+  }
+  body.nav-open .nav--main { transform: translateX(0); }
+  body.nav-open { overflow: hidden; }
+
+  .nav--main > ul { display: block; }
+  .nav--main > ul > li { border-bottom: 1px solid rgba(0,0,0,.08); }
+  .nav--main a { display: block; padding: 12px 0; font-size: var(--fs-sm); }
+  .nav--main > ul > li > a::after { display: none; }
+
+  /* Dropdowns become inline accordions */
+  .sub-menu {
+    position: static; min-width: 0; padding: 0 0 8px 14px;
+    box-shadow: none; opacity: 1; visibility: visible;
+    transform: none; display: none;
+  }
+  .nav--main li.is-open > .sub-menu { display: block; }
+  .sub-menu a { padding: 7px 0; }
+
+  .navscrim {
+    position: fixed; inset: 0; background: rgba(21,35,70,.5);
+    opacity: 0; visibility: hidden; transition: .3s var(--ease); z-index: 250;
+  }
+  body.nav-open .navscrim { opacity: 1; visibility: visible; }
+
+  .header .social { display: none; }
+
+  /* Swap static lists for carousels */
+  .hide-on-mobile  { display: none; }
+  .hide-on-desktop { display: block; }
+
+  /* Two-column splits stack */
+  .turnup .wrapper,
+  .talk .wrapper { flex-direction: column; gap: 34px; }
+  .turnup__media, .turnup__body,
+  .talk__intro, .talk__form { max-width: 100%; flex: 1 1 100%; }
+  .turnup__media img { max-width: 300px; }
+
+  /* Decorative art is desktop-only */
+  .sectionimage { display: none; }
+
+  /* Display headline is set in px on .turnup__body h2, so scale it here */
+  .turnup__body h2 { font-size: 76px; line-height: 78px; }
+
+  .featured--video { height: 560px; }
+
+  /* Turnup columns release their measured widths */
+  .turnup__media, .turnup__body { flex: 1 1 100%; }
+  .featurednew, .featurednew img { height: 340px; }
+  .pagetitle h1 { font-size: 48px; line-height: 58px; margin: 28px 0 16px; }
+  .topcontent { flex-direction: column; gap: 30px; }
+  .topcontent__main, .topcontent__aside { max-width: 100%; flex: 1 1 100%; }
+}
+
+@media (max-width: 740px) {
+  :root {
+    --fs-h1: 30px; --fs-h2: 24px; --fs-h3: 20px;
+    --fs-body: 17px; --fs-display: 30px;
+    --sec-pad: 34px; --sec-pad-lg: 44px; --sec-pad-xl: 48px;
+    --gutter: 20px;
+  }
+
+  .utilitybar .wrapper { justify-content: center; gap: 12px; }
+  .logo svg { width: 180px; }
+
+  .featured--video { height: 460px; }
+  .featured__title h1 { max-width: 100%; }
+
+  .turnup__body h2 { font-size: 52px; line-height: 54px; }
+
+  .servicelist__content,
+  .industrylist__content { flex: 0 0 50%; padding: 0 10px; }
+
+  .clientlist li { padding: 8px 14px; }
+  .clientlist img { height: 66px; }
+
+  .buzz__info h3 { font-size: var(--fs-base); }
+
+  .servicelist__icon,
+  .industrylist__icon { width: 84px; height: 84px; }
+  .industrylist__icon img { width: 64px; height: 64px; }
+
+  .formrow { flex-direction: column; gap: 14px; }
+
+  .testimonial .swiper-slide { padding: 0 4%; }
+  .testimonial blockquote { font-size: 17px; }
+
+  .footer__bottom { flex-direction: column; text-align: center; }
+  .featurednew, .featurednew img { height: 240px; }
+  .pagetitle h1 { font-size: 34px; line-height: 42px; }
+  .page__content .lead { font-size: 18px; }
+  .blog-cta { padding: 38px 0; }
+  .locationcard { gap: 24px; }
+  .newsgrid { gap: 22px; }
+  .newscard { flex: 0 0 100%; }
+  .newscard__thumb img { height: 180px; }
+}
+
+@media (max-width: 600px) {
+  .servicelist__content,
+  .industrylist__content { flex: 0 0 100%; }
+}
+
+@media (max-width: 400px) {
+  :root { --fs-h1: 26px; --gutter: 16px; }
+  .turnup__body h2 { font-size: 40px; line-height: 42px; }
+  .logo svg { width: 155px; }
+  .featured--video { height: 400px; }
+  .btn { padding: 12px 24px; font-size: var(--fs-sm); }
+}
+
+@media print {
+  .utilitybar, .nav--main, .navtoggle, .navscrim,
+  .featured__video, .swiper-button-next, .swiper-button-prev { display: none !important; }
+  body { color: #000; font-size: 12pt; }
+  .gradient, .thetestimonials, .footer { background: none !important; color: #000 !important; }
+  .gradient h1, .gradient h2, .gradient h3, .gradient p,
+  .footer h2, .footer h3, .color-light { color: #000 !important; }
+}

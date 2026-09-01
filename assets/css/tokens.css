@@ -1,0 +1,85 @@
+/* BoardroomPR — design tokens
+   All values measured from computed styles on the live site. */
+
+:root {
+  /* Brand */
+  --navy:        #1D3161;  /* rgb(29,49,97)   headings, gradient stops */
+  --navy-deep:   #152346;  /* rgb(21,35,70)   footer */
+  --blue-mid:    #1B72CB;  /* rgb(27,114,203) gradient midpoint */
+  --blue-logo:   #2E83C5;  /* logo SVG fill */
+  --magenta:     #E9399C;  /* rgb(233,57,156) primary accent, buttons */
+  --magenta-alt: #FF0099;  /* link / hover accent */
+
+  /* Neutrals */
+  --white:       #FFFFFF;
+  --black:       #000000;
+  --ink:         #1F1F1F;
+  --ink-soft:    #32373C;
+  --grey-light:  #F1F4F9;
+  --grey-bg:     #F1F1F1;
+  --grey-rule:   #B1B1B1;
+  --grey-text:   #747775;
+
+  /* Signature section gradient (.companies, .industries) */
+  --gradient-brand: linear-gradient(45deg,
+      var(--navy) 0%, var(--blue-mid) 50%, var(--navy) 100%);
+
+  /* Type families */
+  --font-head: "itc-avant-garde-gothic-pro", "Century Gothic",
+               "Futura", "Trebuchet MS", sans-serif;
+  --font-body: "open-sans", "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "bebas-neue", "Oswald", "Haettenschweiler",
+                  "Arial Narrow", sans-serif;
+
+  /* Type scale */
+  --fs-h1: 48px;
+  --fs-h2: 32px;
+  --fs-h3: 22px;
+  --fs-display: 40px;
+  --fs-body: 19px;
+  --fs-base: 16px;
+  --fs-sm: 14px;
+  --fs-xs: 13px;
+  --fs-nav: 15px;      /* nav links, measured */
+  --fs-tiny: 12px;
+  --fs-micro: 10px;
+
+  /* Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Line heights */
+  --lh-body: 1.7;      /* 32.3px @ 19px */
+  --lh-tight: 1.15;
+  --lh-head: 1.2;
+
+  /* Layout */
+  --container: 1160px;
+  --gutter: 30px;
+  --header-pad-x: 71.25px;
+
+  /* Section rhythm */
+  --sec-pad: 50px;
+  --sec-pad-lg: 74px;
+  --sec-pad-xl: 75px;
+
+  /* Radii */
+  --r-0: 0;
+  --r-sm: 5px;
+  --r-md: 8px;
+  --r-lg: 10px;
+  --r-xl: 20px;
+  --r-round: 50%;
+
+  /* Shadows */
+  --sh-soft:  0 4px 16px rgba(0,0,0,.2);
+  --sh-hair:  0 0 3px rgba(0,0,0,.4);
+  --sh-inset: inset 0 5px 10px rgba(0,0,0,.2);
+
+  /* Motion */
+  --dur: 750ms;
+  --ease: cubic-bezier(.25,.46,.45,.94);
+}
